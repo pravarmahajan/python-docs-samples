@@ -187,6 +187,7 @@ def create_dataset(
     Returns:
         A (dataset_full_path, dataset_csv_filename) tuple.
     """
+    from google.cloud import aiplatform
     client = aiplatform.gapic.DatasetServiceClient(
         client_options={"api_endpoint": "us-central1-aiplatform.googleapis.com"}
     )
@@ -258,6 +259,7 @@ def train_model(
     Returns:
         The training pipeline full path.
     """
+    from google.cloud import aiplatform
     client = aiplatform.gapic.PipelineServiceClient(
         client_options={
             "api_endpoint": "us-central1-aiplatform.googleapis.com",
