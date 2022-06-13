@@ -218,6 +218,7 @@ def import_images_to_dataset(dataset_full_path: str, dataset_csv_filename: str) 
     Returns:
         The dataset_full_path.
     """
+    from google.cloud import aiplatform
     client = aiplatform.gapic.DatasetServiceClient(
         client_options={"api_endpoint": "us-central1-aiplatform.googleapis.com"}
     )
