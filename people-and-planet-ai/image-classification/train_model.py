@@ -120,6 +120,8 @@ def get_image(
         A (category, image_gcs_path) tuple.
     """
     import apache_beam as beam
+    from PIL import Image, ImageFile
+
 
     base_url = "https://lilablobssc.blob.core.windows.net/wcs-unzipped"
     category = image_info["category"]
