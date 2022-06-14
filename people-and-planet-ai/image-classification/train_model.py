@@ -121,6 +121,7 @@ def get_image(
     """
     import apache_beam as beam
     from PIL import Image, ImageFile
+    import io
 
 
     base_url = "https://lilablobssc.blob.core.windows.net/wcs-unzipped"
